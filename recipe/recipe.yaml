@@ -1,6 +1,6 @@
 context:
   name: jira-cli
-  version: "1.6.0"
+  version: "1.7.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/ankitpokhrel/jira-cli/archive/v${{ version }}.tar.gz
-  sha256: 89989534ae3f254be7a13dde51bfcf1c58f36cbf26ad3de9e333ead36579c007
+  sha256: 6b1ecbd2228626cdc987548d8d83faae074c7a167cef737a9ac9180a03767154
 
 build:
   number: 0
@@ -25,8 +25,8 @@ requirements:
 
 tests:
   - script:
-    - jira version
-    - jira --help
+      - jira version
+      - jira --help
   - package_contents:
       bin:
         - jira
